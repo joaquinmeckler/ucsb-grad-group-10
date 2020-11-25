@@ -16,9 +16,14 @@ ucsb_grad<-read_csv(here("data", "ucsb_grad_data.csv"))
 ```
 
 ```{r}
-ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment, fill = ethnicity))+
-  labs(x= "Year", y= "Demographical Proportions of Domestic Enrollment")+
-  geom_col(position= "fill")
+ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment, fill = ethnicity)) +
+  labs(
+    x= "Year",
+    y= "Demographical Proportions of Domestic Enrollment",
+    title = "Demographic Composition of Annual\nDomestic Enrollment at UCSB (2008-2019)"
+    ) +
+  geom_col(position= "fill") +
+  theme_minimal()
 ```
 
 
